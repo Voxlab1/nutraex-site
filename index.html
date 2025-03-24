@@ -18,6 +18,7 @@
         .form-wrapper { margin-top: 20px; }
         input[type="email"] { padding:10px; width:60%; max-width:300px; }
         button { padding:10px 20px; background:#d4af37; border:none; font-weight:bold; cursor:pointer; }
+        .success { margin-top: 15px; color: green; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -44,14 +45,34 @@
             <h2>Rimani aggiornato</h2>
             <p>Vuoi essere tra i primi a provare l’app NUTRAEX e ricevere i contenuti premium?</p>
             <div class="form-wrapper">
-                <form action="https://script.google.com/macros/s/AKfycbyPCmNDSgQHIdPGX2Ul3yYaHwD_-m9Gqeeei2L7SnjYdSytNId62_YrTnzBrk4-c0hU/exec" method="POST" onsubmit="this.reset(); alert('Iscrizione completata con successo!'); return true;">
-                    <input type="email" name="email" placeholder="La tua email" required>
+                <form id="newsletterForm">
+                    <input type="email" id="email" name="email" placeholder="La tua email" required>
                     <button type="submit">Iscriviti ora</button>
                 </form>
+                <div class="success" id="responseMessage"></div>
             </div>
         </section>
     </div>
     <footer>© 2025 NUTRAEX – Tutti i diritti riservati</footer>
 </main>
+
+<script>
+  document.getElementById("newsletterForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const email = document.getElementById("email").value;
+    const url = "https://script.google.com/macros/s/AKfycbyPCmNDSgQHIdPGX2Ul3yYaHwD_-m9Gqeeei2L7SnjYdSytNId62_YrTnzBrk4-c0hU/exec";
+    fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: "email=" + encodeURIComponent(email)
+    });
+    document.getElementById("responseMessage").innerText = "✅ Iscrizione completata con successo!";
+    document.getElementById("newsletterForm").reset();
+  });
+</script>
+
 </body>
 </html>
