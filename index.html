@@ -15,6 +15,9 @@
         header { text-align: center; padding-bottom: 20px; border-bottom: 2px solid #eee; }
         .cta { background: #d4af37; color: #000; text-decoration: none; font-weight: bold; padding: 15px 30px; display: inline-block; margin: 30px 0; border-radius: 5px; }
         footer { text-align: center; padding: 20px; background: #000; color: #fff; }
+        .form-wrapper { margin-top: 20px; }
+        input[type="email"] { padding:10px; width:60%; max-width:300px; }
+        button { padding:10px 20px; background:#d4af37; border:none; font-weight:bold; cursor:pointer; }
     </style>
 </head>
 <body>
@@ -40,10 +43,12 @@
         <section>
             <h2>Rimani aggiornato</h2>
             <p>Vuoi essere tra i primi a provare l’app NUTRAEX e ricevere i contenuti premium?</p>
-            <form action="https://forms.gle/M4Y3e3D4tDjNczJb7" target="_blank">
-                <input type="email" placeholder="La tua email" required style="padding:10px; width:60%; max-width:300px;">
-                <button type="submit" style="padding:10px 20px; background:#d4af37; border:none; font-weight:bold;">Iscriviti ora</button>
-            </form>
+            <div class="form-wrapper">
+                <form action="https://script.google.com/macros/s/AKfycbyPCmNDSgQHIdPGX2Ul3yYaHwD_-m9Gqeeei2L7SnjYdSytNId62_YrTnzBrk4-c0hU/exec" method="POST" onsubmit="this.reset(); alert('Iscrizione completata con successo!'); return true;">
+                    <input type="email" name="email" placeholder="La tua email" required>
+                    <button type="submit">Iscriviti ora</button>
+                </form>
+            </div>
         </section>
     </div>
     <footer>© 2025 NUTRAEX – Tutti i diritti riservati</footer>
