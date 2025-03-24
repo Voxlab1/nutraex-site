@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NUTRAEX - La tua Mente Nutre il tuo Corpo</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; color: #333; display: flex; }
+        body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; color: #333; display: flex; min-height: 100vh; flex-direction: row; }
         nav { background: #000; color: #fff; width: 200px; min-height: 100vh; padding: 40px 20px; box-sizing: border-box; }
         nav h2 { font-size: 20px; margin-bottom: 20px; }
         nav a { display: block; color: #d4af37; text-decoration: none; margin-bottom: 15px; }
-        main { flex: 1; padding: 40px 20px; background: #fff; }
+        main { flex: 1; display: flex; flex-direction: column; min-height: 100vh; background: #fff; }
+        .main-content { flex: 1; padding: 40px 20px; }
         header { text-align: center; padding-bottom: 20px; border-bottom: 2px solid #eee; }
         .cta { background: #d4af37; color: #000; text-decoration: none; font-weight: bold; padding: 15px 30px; display: inline-block; margin: 30px 0; border-radius: 5px; }
-        footer { text-align: center; padding: 20px; margin-top: 40px; background: #000; color: #fff; }
+        footer { text-align: center; padding: 20px; background: #000; color: #fff; }
     </style>
 </head>
 <body>
@@ -25,24 +26,26 @@
     <a href="cosa-trovi.html">🧠 Cosa trovi nell’app</a>
 </nav>
 <main>
-    <header>
-        <h1>NUTRAEX – La tua Mente Nutre il tuo Corpo</h1>
-        <div style="font-size: 40px;">🍏</div>
-    </header>
-    <section>
-        <h2>Un Nuovo Approccio all’Alimentazione</h2>
-        <p>Non esiste la colpa nell'alimentazione. Esiste solo un messaggio che non hai ancora compreso. <strong>NUTRAEX</strong> te lo traduce.</p>
-        <p>Scopri l’eBook gratuito: un viaggio simbolico nel rapporto tra mente, corpo e nutrizione. Nessuna dieta. Nessun giudizio. Solo trasformazione.</p>
-        <a class="cta" href="https://raw.githubusercontent.com/Voxlab1/nutraex-site/main/Nutraex_manifesto.pdf" target="_blank">Scarica ora l’eBook gratuito</a>
-    </section>
-    <section>
-        <h2>Rimani aggiornato</h2>
-        <p>Vuoi essere tra i primi a provare l’app NUTRAEX e ricevere i contenuti premium?</p>
-        <form action="https://forms.gle/M4Y3e3D4tDjNczJb7" target="_blank">
-            <input type="email" placeholder="La tua email" required style="padding:10px; width:60%; max-width:300px;">
-            <button type="submit" style="padding:10px 20px; background:#d4af37; border:none; font-weight:bold;">Iscriviti ora</button>
-        </form>
-    </section>
+    <div class="main-content">
+        <header>
+            <h1>NUTRAEX – La tua Mente Nutre il tuo Corpo</h1>
+            <div style="font-size: 40px;">🜍</div>
+        </header>
+        <section>
+            <h2>Un Nuovo Approccio all’Alimentazione</h2>
+            <p>Non esiste la colpa nell'alimentazione. Esiste solo un messaggio che non hai ancora compreso. <strong>NUTRAEX</strong> te lo traduce.</p>
+            <p>Scopri l’eBook gratuito: un viaggio simbolico nel rapporto tra mente, corpo e nutrizione. Nessuna dieta. Nessun giudizio. Solo trasformazione.</p>
+            <a class="cta" href="https://raw.githubusercontent.com/Voxlab1/nutraex-site/main/Nutraex_manifesto.pdf" target="_blank">Scarica ora l’eBook gratuito</a>
+        </section>
+        <section>
+            <h2>Rimani aggiornato</h2>
+            <p>Vuoi essere tra i primi a provare l’app NUTRAEX e ricevere i contenuti premium?</p>
+            <form action="https://forms.gle/M4Y3e3D4tDjNczJb7" target="_blank">
+                <input type="email" placeholder="La tua email" required style="padding:10px; width:60%; max-width:300px;">
+                <button type="submit" style="padding:10px 20px; background:#d4af37; border:none; font-weight:bold;">Iscriviti ora</button>
+            </form>
+        </section>
+    </div>
     <footer>© 2025 NUTRAEX – Tutti i diritti riservati</footer>
 </main>
 </body>
